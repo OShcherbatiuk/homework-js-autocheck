@@ -1,4 +1,12 @@
-
+function makeStringFromArray(array, delimeter) {
+  let string;
+  // Пиши код ниже этой строки
+ 
+  string = array.join(delimeter)
+ 
+  // Пиши код выше этой строки
+  return string;
+}
 
 // Метод массива join()
 // Метод массивов join(delimeter) позволяет соединить элементы массива в строку. В строке элементы будут разделены символом или группой символов указанных в delimeter. То есть это операция обратная методу строк split(delimeter).
