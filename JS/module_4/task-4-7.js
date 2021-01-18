@@ -6,16 +6,10 @@ const orders = [
 
 // Пиши код ниже этой строки
 function composeMessage(position) {
-    const newOrders = Object.values(this.orders);
-    for (const order of newOrders) {
-        const orderIndex = this.orders.indexOf(order);
-        const position = orderIndex + 1;
-        return `Готовим ${order.name} для ${order.email}. Ваш заказ ${position}-й в очереди.`
-    }
+	return `Готовим ${this.dish} для ${this.email}. Ваш заказ ${position}-й в очереди.`
 }
 
-const messages = [];
-
+const messages = orders.map(order => { return composeMessage.call(order, orders.indexOf(order) + 1) });
 
 // Метод call
 // Бывают ситуации когда функцию нужно вызвать в контексте какого-то объекта, при этом функция не является его методом. Для этого у функций есть методы call и apply.
